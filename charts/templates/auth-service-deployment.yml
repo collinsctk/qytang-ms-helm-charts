@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployments.authService.name }}
+  namespace: {{ .Values.deployments.namespace }}
+  labels:
+    app: {{ .Values.deployments.authService.app }}
+spec:
+  replicas: {{ .Values.deployments.authService.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.deployments.authService.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deployments.authService.app }}
+    spec:
+      serviceAccountName: {{ .Values.deployments.serviceAccountName }}
+      imagePullSecrets:
+        - name: {{ .Values.deployments.authService.image.pullSecret }}
+      containers:
+        - name: {{ .Values.deployments.authService.name }}
+          image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.authService.image.tag }}
+          imagePullPolicy: {{ .Values.deployments.authService.image.pullPolicy }}
+          ports:
+            - containerPort: {{ .Values.deployments.authService.containerPort }}
+          resources:
+            limits:
+              cpu: {{ .Values.deployments.authService.resources.limits.cpu }}
+              memory: {{ .Values.deployments.authService.resources.limits.memory }}
