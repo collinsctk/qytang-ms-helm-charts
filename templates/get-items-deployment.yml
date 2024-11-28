@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployments.getItemsService.name }}
+  namespace: {{ .Values.deployments.namespace }}
+  labels:
+    app: {{ .Values.deployments.getItemsService.app }}
+spec:
+  replicas: {{ .Values.deployments.getItemsService.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.deployments.getItemsService.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deployments.getItemsService.app }}
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.deployments.getItemsService.image.pullSecret }}
+      containers:
+      - name: {{ .Values.deployments.getItemsService.name }}
+        image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.getItemsService.image.tag }}

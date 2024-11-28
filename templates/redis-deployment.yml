@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.deployments.redisService.name }}
+  namespace: {{ .Values.deployments.namespace}}
+  labels:
+    app: {{ .Values.deployments.redisService.app }}
+spec:
+  replicas: {{ .Values.deployments.redisService.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.deployments.redisService.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.deployments.redisService.app }}
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.deployments.redisService.image.pullSecret }}
+      containers:
+      - name: {{ .Values.deployments.redisService.name }}
+        image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.redisService.image.tag }}
