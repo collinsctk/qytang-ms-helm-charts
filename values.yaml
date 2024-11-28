@@ -1,6 +1,6 @@
 secretsDocker:
   name: qytang-docker
-  namespace: qytang-ns
+  namespace: qytang-ns1
   dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZnctdnBjLmNuLWhhbmd6aG91LnBlcnNvbmFsLmNyLmFsaXl1bmNzLmNvbSI6eyJ1c2VybmFtZSI6InF5dGFuZ2xhYiIsInBhc3N3b3JkIjoiQ2lzYzAxMjMiLCJhdXRoIjoiY1hsMFlXNW5iR0ZpT2tOcGMyTXdNVEl6In19fQ==
 
 secretsTls:
