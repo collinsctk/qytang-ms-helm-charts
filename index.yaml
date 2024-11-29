@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   qytang-microservice:
   - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2024-11-29T07:09:58.537740038Z"
+    description: A Helm chart for Kubernetes
+    digest: 62abc261845be241a1b7c7f3f046a49227db05add0b6bf41c608dd4bd901b00f
+    icon: https://www.qytang.com/Public/home/images/logo0.png
+    name: qytang-microservice
+    type: application
+    urls:
+    - https://github.com/collinsctk/qytang-ms-helm-charts/releases/download/qytang-microservice-0.2.0/qytang-microservice-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 1.16.9
     created: "2024-11-29T07:03:31.021656708Z"
     description: A Helm chart for Kubernetes
@@ -100,4 +111,4 @@ entries:
     urls:
     - https://collinsctk.github.io/qytang-ms-helm-charts/qytang-microservice-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-29T07:03:31.021696904Z"
+generated: "2024-11-29T07:09:58.537803465Z"
