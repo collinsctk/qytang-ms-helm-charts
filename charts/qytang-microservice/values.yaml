@@ -74,7 +74,7 @@ deployments:
     name: get-items-deployment
     serviceName: get-items
     app: get-items
-    replicaCount: 2
+    replicaCount: 3
     image:
       tag: qyt_falcon_get_items2024-11-28-22-21-49
       pullPolicy: Always
@@ -86,9 +86,9 @@ deployments:
     name: nginx-frontend-deployment
     serviceName: nginx-frontend
     app: nginx-frontend
-    replicaCount: 2
+    replicaCount: 3
     image:
-      tag: qyt_falcon_nginx2024-11-29-15-53-20
+      tag: qyt_falcon_nginx2024-11-29-16-07-50
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 80
