@@ -2,9 +2,9 @@ secretsDocker:
   name: qytang-docker
   namespace: qytang-ns
   # vpc access
-#  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZnctdnBjLmNuLWhhbmd6aG91LnBlcnNvbmFsLmNyLmFsaXl1bmNzLmNvbSI6eyJ1c2VybmFtZSI6InF5dGFuZ2xhYiIsInBhc3N3b3JkIjoiQ2lzYzAxMjMiLCJhdXRoIjoiY1hsMFlXNW5iR0ZpT2tOcGMyTXdNVEl6In19fQ==
+  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZnctdnBjLmNuLWhhbmd6aG91LnBlcnNvbmFsLmNyLmFsaXl1bmNzLmNvbSI6eyJ1c2VybmFtZSI6InF5dGFuZ2xhYiIsInBhc3N3b3JkIjoiQ2lzYzAxMjMiLCJhdXRoIjoiY1hsMFlXNW5iR0ZpT2tOcGMyTXdNVEl6In19fQ==
   # interface access
-  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZncuY24taGFuZ3pob3UucGVyc29uYWwuY3IuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoicXl0YW5nbGFiIiwicGFzc3dvcmQiOiJDaXNjMDEyMyIsImF1dGgiOiJjWGwwWVc1bmJHRmlPa05wYzJNd01USXoifX19
+#  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZncuY24taGFuZ3pob3UucGVyc29uYWwuY3IuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoicXl0YW5nbGFiIiwicGFzc3dvcmQiOiJDaXNjMDEyMyIsImF1dGgiOiJjWGwwWVc1bmJHRmlPa05wYzJNd01USXoifX19
 
 secretsTls:
   name: ms-tls-secret
@@ -29,9 +29,9 @@ deployments:
   namespace: qytang-ns
   serviceAccountName: qytangsa
   # interface access
-  imageRepository: crpi-qfyxqte7j5umc0fw.cn-hangzhou.personal.cr.aliyuncs.com/qytang-space
+#  imageRepository: crpi-qfyxqte7j5umc0fw.cn-hangzhou.personal.cr.aliyuncs.com/qytang-space
   # vpc access
-#  imageRepository: crpi-qfyxqte7j5umc0fw-vpc.cn-hangzhou.personal.cr.aliyuncs.com/qytang-space
+  imageRepository: crpi-qfyxqte7j5umc0fw-vpc.cn-hangzhou.personal.cr.aliyuncs.com/qytang-space
   imageName: qytang-micro-service
 
   authService:
