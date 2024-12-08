@@ -15,8 +15,8 @@ spec:
       labels:
         app: {{ .Values.deployments.postItemsService.app }}
     spec:
-      imagePullSecrets:
-        - name: {{ .Values.deployments.postItemsService.image.pullSecret }}
+{{/*      imagePullSecrets:*/}}
+{{/*        - name: {{ .Values.deployments.postItemsService.image.pullSecret }}*/}}
       containers:
       - name: {{ .Values.deployments.postItemsService.name }}
         image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.postItemsService.image.tag }}
