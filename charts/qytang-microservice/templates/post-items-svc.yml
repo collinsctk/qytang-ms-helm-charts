@@ -6,7 +6,9 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.postItemsService.app }}
+  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.postItemsService.servicePort }}
       targetPort: {{ .Values.deployments.postItemsService.containerPort }}
+      nodePort: {{ .Values.deployments.postItemsService.servicePort }}

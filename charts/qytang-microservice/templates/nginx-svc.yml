@@ -6,7 +6,9 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.nginxService.app }}
+  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.nginxService.servicePort }}
       targetPort: {{ .Values.deployments.nginxService.containerPort }}
+      nodePort: {{ .Values.deployments.nginxService.servicePort }}

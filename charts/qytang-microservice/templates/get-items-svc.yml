@@ -6,7 +6,9 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.getItemsService.app }}
+  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.getItemsService.servicePort }}
       targetPort: {{ .Values.deployments.getItemsService.containerPort }}
+      nodePort: {{ .Values.deployments.getItemsService.servicePort }}

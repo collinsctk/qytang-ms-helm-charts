@@ -6,7 +6,9 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.dbService.app }}
+  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.dbService.servicePort }}
       targetPort: {{ .Values.deployments.dbService.containerPort }}
+      nodePort: {{ .Values.deployments.dbService.servicePort }}
