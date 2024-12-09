@@ -1,10 +1,10 @@
-#secretsDocker:
-#  name: qytang-docker
-#  namespace: qytang-ns
-#  # vpc access
+secretsDocker:
+  name: qytang-docker
+  namespace: qytang-ns
+  # interface access
+  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZncuY24taGFuZ3pob3UucGVyc29uYWwuY3IuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoicXl0YW5nbGFiIiwicGFzc3dvcmQiOiJDaXNjMDEyMyIsImF1dGgiOiJjWGwwWVc1bmJHRmlPa05wYzJNd01USXoifX19
+  # vpc access
 #  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZnctdnBjLmNuLWhhbmd6aG91LnBlcnNvbmFsLmNyLmFsaXl1bmNzLmNvbSI6eyJ1c2VybmFtZSI6InF5dGFuZ2xhYiIsInBhc3N3b3JkIjoiQ2lzYzAxMjMiLCJhdXRoIjoiY1hsMFlXNW5iR0ZpT2tOcGMyTXdNVEl6In19fQ==
-#  # interface access
-##  dockerConfigJson: eyJhdXRocyI6eyJjcnBpLXFmeXhxdGU3ajV1bWMwZncuY24taGFuZ3pob3UucGVyc29uYWwuY3IuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoicXl0YW5nbGFiIiwicGFzc3dvcmQiOiJDaXNjMDEyMyIsImF1dGgiOiJjWGwwWVc1bmJHRmlPa05wYzJNd01USXoifX19
 
 secretsTls:
   name: ms-tls-secret
@@ -14,10 +14,10 @@ secretsTls:
   # base64 -w 0 /qytang-aliyun/aliyun_7_k8s/k8s_micro_services/manifest/certs/ms.mingjiao.tech.key
   key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFb3dJQkFBS0NBUUVBayt3dGVJTVBaU25HM2gvb2Z6cnFIT2NWV1lpeWJnb2xCT0JnNmxIc2lRc3pDQkJICkI2VC9ZSjFvUUk3THNreWE5VlBnRVN2dmNNL0txdDQxb29WanRPNkRoYjZxK3FWUHYwcEh0cE5kQkNVUk43ZncKR0FmWkN1OHord01oOU5vQUF5Nmc5WWFhdzlaRXVpNkVFUmFPenFCYkVwYXc2Y2pldzFFREttdzBidG5lRHBWOQpad0tzZGJQODY3QmdJSUlyT1ZWMTQwd2ZrRnhOWEc3dzJDOXlISXlkRDJUcXZnT3FSSk9laWVTcXQ3YjZwYXl5CnFlSGptaHNTb3BPY2IzRHc3UERaYmNkaCswYUZ3RHdaU0ZlOGRzK0J5OGNoYUtZdk9idDhhbG1ZcmJYeHFxTHoKSjNHM0hEaHZzZkRla2h3cWZQeFlYeGRqWm9XOGh1TXhQdXRneVFJREFRQUJBb0lCQUNSZzZaL2hMNGlVR1NYbwpsLyt1U0FRNnFvdjk2OC9YSzlxQ3FpTUdhZE1jVDMwVXI3dElEMHc5K2ZVaWlTTDg1d0Vka3hYMkJhbHJXTzdqCnZqSU5kd040d3h6QjB2L1ladi9tN3pNT0U4cWdxUmJZWkRJc3YrcUtBSEVqaUpiVWhEdEVITzYxSDF1NVZ1YW8KNk83ZzZ0Y1RKY0t4RDZvM0xkM0FEelRBTHJieCt3aGt3QTkwUUlWOEtmZnEvWkpOS2JhNHN1MHhjOXdvRUV4ZQpLenZxc1NNYVBpL1lSTVZ0Wk9HemN6b0orNVlVNWhWT2pPODJEUE8zU25Hejlvd3U2Z2dqMTNoc1A3TEN2U3dxCkxlRTRxdUNJK0w4dnB3VnJreC9abjNuano3T0lQYmNmaTBuOFEvZXhaMkVndWlIcktxWVQySXArVlc1eFRyUDUKbkR6bjF2a0NnWUVBeGtXMmJmNXRjZzUxSlhDb1FFMVYxb1krV2g4bmxZRXdaendSNDdseWQ5UThrcEQ1aGE3OQpSem8rVmZEMVJ1d1pyaUtRM3RVUWpLMm1MSnVFNXJZbDk2cE15Y0VzbVdoSmExQnFFeVFjSUQ0NTdxajNvS2xhCmF2KzhpdXlMQ3prUzZ5cFBFQnUxSUZKamxNbnR3QjErVnMwUFBYdVZGS2JyOG15MXFsM1J1cVVDZ1lFQXZ2MmgKbjhUa1hBSTdlYVg3SWNRV2xBOWp6SVNVVjJYRzFYZERDRjZkUWZ1emdZT3RkN241a25GVzRZblZyRFRoc3F1dQpQSVcxL21iSFNIRGh2WGJ3MVF1ZmVCeHRpN2VKaTRNT3VMWTFSVzVnSzZFc0ZXNGhaNmJQRHNtL29QSnRETURuCndTQmdVTDVUZGM3b0p5QWkyVlJ5TXA3NWJSQzhzTm5tbnNTQ1NGVUNnWUFsSjRFbElZMXUxeWk2cUY3UEZlN2sKOFdrVHlFekpwbGprcjR3R3FZUzYwY204Q1hESXpWN25EeElKVnNzUHpFU1ByaWlKcVZHZG14ak51U0x4Zk9hbQpmNEkrT0hYY0ZYL1VuVkFUWUN2cEd1QU9TaG1GUU5jUnYvU2I3L0dxVzdxZzJOL1IrKzg0TEZnKzFJdzUrUXpvCnhTcDY4Z0tneVJyajVkMHhITDJsaFFLQmdRQzlPTWdDWkszaXdvdHVVSlhvdEQreVhUVUJFWEZ1elhVYlZOZGkKMldwd1R4RmZoYmc5WUZIMVZyay9Kckk5dFA3UForeHVKZ05Ua3p4cGR2MFFHMkVya2lKaWU3ZkVyd2hrNG1tWgpjMXgvOTRUc2RQZ2FHMHlaUnRqcHk5UkJmeTJ2YndldGZZZ3ZOd0cxUEZNaFFHT0djblhaMVV0RlZVbTg1WVhwClVzUEpLUUtCZ0RsbWxkWk1JcGcwZFUxVExMWjRmVGswemlyUDhTY3JzS04yNGFJOW9FUG9tT29aTFRQd2pYWmgKTUw1UzVuL2ZEWFBwVzhuRmpuY3BTVU5VVXl2UVNaQkV0bklUU0gxa0I2ZkFiL24vR0xvTkdERXZIMUdHMDlQegpuYmtTMUpFbkQvbkVScTMrTHExTHIxeHlVSmZEUmU2SDZSUTVqR2gwMUpNc2RORGxNSTJhCi0tLS0tRU5EIFJTQSBQUklWQVRFIEtFWS0tLS0tCg==
 
-#serviceAccount:
-#  name: qytangsa
-#  namespace: qytang-ns
-#  roleName: qytang-ack-role
+serviceAccount:
+  name: qytangsa
+  namespace: qytang-ns
+  roleName: qytang-ack-role
 
 Ingress:
   name: qytang-msx-ingress
@@ -42,7 +42,7 @@ deployments:
     image:
       tag: qyt_falcon_auth_service2024-11-28-22-16-50
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 8000
     servicePort: 8000
     ingressPath: /token
@@ -58,7 +58,7 @@ deployments:
     image:
       tag: qyt_falcon_cache_service2024-11-28-22-19-10
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 8003
     servicePort: 8003
   dbService:
@@ -69,7 +69,7 @@ deployments:
     image:
       tag: qyt_falcon_db2024-11-28-22-20-26
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 5432
     servicePort: 5432
     dbCred:
@@ -84,7 +84,7 @@ deployments:
     image:
       tag: qyt_falcon_get_items2024-11-28-22-21-49
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 8001
     servicePort: 8001
     ingressPath: /get_items
@@ -96,7 +96,7 @@ deployments:
     image:
       tag: qyt_falcon_nginx2024-11-29-16-07-50
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 80
     servicePort: 80
     ingressPath: /
@@ -108,7 +108,7 @@ deployments:
     image:
       tag: qyt_falcon_post_items2024-11-28-22-23-18
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 8002
     servicePort: 8002
     ingressPath: /post_items
@@ -120,6 +120,6 @@ deployments:
     image:
       tag: qyt_falcon_redis
       pullPolicy: Always
-#      pullSecret: qytang-docker
+      pullSecret: qytang-docker
     containerPort: 6379
     servicePort: 6379

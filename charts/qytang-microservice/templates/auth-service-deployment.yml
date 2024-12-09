@@ -15,9 +15,9 @@ spec:
       labels:
         app: {{ .Values.deployments.authService.app }}
     spec:
-{{/*      serviceAccountName: {{ .Values.deployments.serviceAccountName }}*/}}
-{{/*      imagePullSecrets:*/}}
-{{/*        - name: {{ .Values.deployments.authService.image.pullSecret }}*/}}
+      serviceAccountName: {{ .Values.deployments.serviceAccountName }}
+      imagePullSecrets:
+        - name: {{ .Values.deployments.authService.image.pullSecret }}
       containers:
         - name: {{ .Values.deployments.authService.name }}
           image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.authService.image.tag }}

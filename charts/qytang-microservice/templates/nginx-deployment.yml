@@ -15,8 +15,8 @@ spec:
       labels:
         app: {{ .Values.deployments.nginxService.app }}
     spec:
-{{/*      imagePullSecrets:*/}}
-{{/*        - name: {{ .Values.deployments.nginxService.image.pullSecret }}*/}}
+      imagePullSecrets:
+        - name: {{ .Values.deployments.nginxService.image.pullSecret }}
       containers:
       - name: {{ .Values.deployments.nginxService.name }}
         image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.nginxService.image.tag }}
