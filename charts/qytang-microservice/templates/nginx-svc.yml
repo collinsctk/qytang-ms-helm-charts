@@ -11,4 +11,4 @@ spec:
     - protocol: TCP
       port: {{ .Values.deployments.nginxService.servicePort }}
       targetPort: {{ .Values.deployments.nginxService.containerPort }}
-      nodePort: {{ .Values.deployments.nginxService.servicePort }}
+      nodePort: {{ .Values.deployments.nginxService.nodePort }}

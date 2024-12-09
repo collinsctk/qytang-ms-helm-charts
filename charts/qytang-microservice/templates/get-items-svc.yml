@@ -11,4 +11,4 @@ spec:
     - protocol: TCP
       port: {{ .Values.deployments.getItemsService.servicePort }}
       targetPort: {{ .Values.deployments.getItemsService.containerPort }}
-      nodePort: {{ .Values.deployments.getItemsService.servicePort }}
+      nodePort: {{ .Values.deployments.getItemsService.nodePort }}

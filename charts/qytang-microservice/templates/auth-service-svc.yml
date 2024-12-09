@@ -11,4 +11,4 @@ spec:
     - protocol: TCP
       port: {{ .Values.deployments.authService.servicePort }}
       targetPort: {{ .Values.deployments.authService.containerPort }}
-      nodePort: {{ .Values.deployments.authService.servicePort }}
+      nodePort: {{ .Values.deployments.authService.nodePort }}

@@ -6,9 +6,7 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.redisService.app }}
-  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.redisService.servicePort }}
       targetPort: {{ .Values.deployments.redisService.containerPort }}
-      nodePort: {{ .Values.deployments.redisService.servicePort }}

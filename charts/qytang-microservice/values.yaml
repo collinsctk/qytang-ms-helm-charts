@@ -44,6 +44,7 @@ deployments:
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 8000
+    nodePort: 30800
     servicePort: 8000
     ingressPath: /token
     resources:
@@ -86,6 +87,7 @@ deployments:
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 8001
+    nodePort: 30801
     servicePort: 8001
     ingressPath: /get_items
   nginxService:
@@ -98,6 +100,7 @@ deployments:
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 80
+    nodePort: 30880
     servicePort: 80
     ingressPath: /
   postItemsService:
@@ -110,6 +113,7 @@ deployments:
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 8002
+    nodePort: 30802
     servicePort: 8002
     ingressPath: /post_items
   redisService:

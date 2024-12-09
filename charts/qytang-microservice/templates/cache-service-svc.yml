@@ -6,9 +6,7 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.cacheService.app }}
-  type: NodePort
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.cacheService.servicePort }}
       targetPort: {{ .Values.deployments.cacheService.containerPort }}
-      nodePort: {{ .Values.deployments.cacheService.servicePort}}

@@ -11,4 +11,4 @@ spec:
     - protocol: TCP
       port: {{ .Values.deployments.postItemsService.servicePort }}
       targetPort: {{ .Values.deployments.postItemsService.containerPort }}
-      nodePort: {{ .Values.deployments.postItemsService.servicePort }}
+      nodePort: {{ .Values.deployments.postItemsService.nodePort }}
