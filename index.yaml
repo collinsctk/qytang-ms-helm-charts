@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   qytang-microservice:
   - apiVersion: v2
+    appVersion: 0.3.3
+    created: "2024-12-10T02:59:38.244473826Z"
+    description: Final Test 0.3.3
+    digest: 11dad27c47041bf65205a8587cd7447d4649da34656cf0be0df8bcc078f35cbf
+    icon: https://www.qytang.com/Public/home/images/logo0.png
+    name: qytang-microservice
+    type: application
+    urls:
+    - https://github.com/collinsctk/qytang-ms-helm-charts/releases/download/qytang-microservice-0.3.3/qytang-microservice-0.3.3.tgz
+    version: 0.3.3
+  - apiVersion: v2
     appVersion: 0.3.2
     created: "2024-12-09T03:53:26.470145234Z"
     description: Add Node Port 30xxx
@@ -243,4 +254,4 @@ entries:
     urls:
     - https://collinsctk.github.io/qytang-ms-helm-charts/qytang-microservice-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-09T03:53:26.470340558Z"
+generated: "2024-12-10T02:59:38.244631181Z"
