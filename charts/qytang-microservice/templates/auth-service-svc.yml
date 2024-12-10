@@ -6,9 +6,9 @@ metadata:
 spec:
   selector:
     app: {{ .Values.deployments.authService.app }}
-  type: NodePort
+{{/*  type: NodePort*/}}
   ports:
     - protocol: TCP
       port: {{ .Values.deployments.authService.servicePort }}
       targetPort: {{ .Values.deployments.authService.containerPort }}
-      nodePort: {{ .Values.deployments.authService.nodePort }}
+{{/*      nodePort: {{ .Values.deployments.authService.nodePort }}*/}}
