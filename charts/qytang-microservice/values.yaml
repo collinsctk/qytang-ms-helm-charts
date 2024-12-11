@@ -28,7 +28,10 @@ Ingress:
 deployments:
   namespace: qytang-ns
   serviceAccountName: qytangsa
-  dbname: db
+  dbName: db
+  dbHost: db
+  dbUser: qytdbuser
+  dbPass: Cisc0123
   # interface access
   imageRepository: crpi-qfyxqte7j5umc0fw.cn-hangzhou.personal.cr.aliyuncs.com/qytang-space
   # vpc access

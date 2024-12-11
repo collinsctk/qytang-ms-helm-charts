@@ -20,3 +20,12 @@ spec:
       containers:
       - name: {{ .Values.deployments.cacheService.name }}
         image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.cacheService.image.tag }}
+        env:
+          - name: DBName
+            value: {{ .Values.deployments.dbName }}
+          - name: DBHost
+            value: {{ .Values.deployments.dbHost }}
+          - name: DBUser
+            value: {{ .Values.deployments.dbUser }}
+          - name: DBPass
+            value: {{ .Values.deployments.dbPass }}
