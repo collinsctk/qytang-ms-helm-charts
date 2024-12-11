@@ -20,3 +20,6 @@ spec:
       containers:
       - name: {{ .Values.deployments.postItemsService.name }}
         image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.postItemsService.image.tag }}
+        env:
+          - name: DBName
+            value: {{ .Values.deployments.dbname }}
