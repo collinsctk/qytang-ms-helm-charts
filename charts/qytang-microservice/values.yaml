@@ -100,7 +100,10 @@ deployments:
     app: nginx-frontend
     replicaCount: 1
     image:
-      tag: qyt_falcon_nginx2024-11-29-16-07-50
+      # 英文Login
+#      tag: qyt_falcon_nginx2024-11-29-16-07-50
+      # 中文登录
+      tag: qyt_falcon_nginx2024-12-11-16-44-35
       pullPolicy: Always
       pullSecret: qytang-docker
     containerPort: 80
