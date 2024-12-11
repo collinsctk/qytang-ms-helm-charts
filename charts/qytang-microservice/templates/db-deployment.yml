@@ -1,29 +1,29 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ .Values.deployments.dbService.name }}
-  namespace: {{ .Values.deployments.namespace }}
-  labels:
-    app: {{ .Values.deployments.dbService.app }}
-spec:
-  replicas: {{ .Values.deployments.dbService.replicaCount }}
-  selector:
-    matchLabels:
-      app: {{ .Values.deployments.dbService.app }}
-  template:
-    metadata:
-      labels:
-        app: {{ .Values.deployments.dbService.app }}
-    spec:
-      imagePullSecrets:
-        - name: {{ .Values.deployments.dbService.image.pullSecret }}
-      containers:
-      - name: {{ .Values.deployments.dbService.name }}
-        image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.dbService.image.tag }}
-        env:
-          - name: POSTGRES_USER
-            value: {{ .Values.deployments.dbService.dbCred.dbUser }}
-          - name: POSTGRES_PASSWORD
-            value: {{ .Values.deployments.dbService.dbCred.dbPassword }}
-          - name: POSTGRES_DB
-            value: {{ .Values.deployments.dbService.dbCred.dbName }}
+{{/*apiVersion: apps/v1*/}}
+{{/*kind: Deployment*/}}
+{{/*metadata:*/}}
+{{/*  name: {{ .Values.deployments.dbService.name }}*/}}
+{{/*  namespace: {{ .Values.deployments.namespace }}*/}}
+{{/*  labels:*/}}
+{{/*    app: {{ .Values.deployments.dbService.app }}*/}}
+{{/*spec:*/}}
+{{/*  replicas: {{ .Values.deployments.dbService.replicaCount }}*/}}
+{{/*  selector:*/}}
+{{/*    matchLabels:*/}}
+{{/*      app: {{ .Values.deployments.dbService.app }}*/}}
+{{/*  template:*/}}
+{{/*    metadata:*/}}
+{{/*      labels:*/}}
+{{/*        app: {{ .Values.deployments.dbService.app }}*/}}
+{{/*    spec:*/}}
+{{/*      imagePullSecrets:*/}}
+{{/*        - name: {{ .Values.deployments.dbService.image.pullSecret }}*/}}
+{{/*      containers:*/}}
+{{/*      - name: {{ .Values.deployments.dbService.name }}*/}}
+{{/*        image: {{ printf "%s/%s:%s" .Values.deployments.imageRepository .Values.deployments.imageName .Values.deployments.dbService.image.tag }}*/}}
+{{/*        env:*/}}
+{{/*          - name: POSTGRES_USER*/}}
+{{/*            value: {{ .Values.deployments.dbService.dbCred.dbUser }}*/}}
+{{/*          - name: POSTGRES_PASSWORD*/}}
+{{/*            value: {{ .Values.deployments.dbService.dbCred.dbPassword }}*/}}
+{{/*          - name: POSTGRES_DB*/}}
+{{/*            value: {{ .Values.deployments.dbService.dbCred.dbName }}*/}}
