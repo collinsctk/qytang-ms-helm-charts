@@ -2,6 +2,17 @@ apiVersion: v1
 entries:
   qytang-microservice:
   - apiVersion: v2
+    appVersion: 0.3.6
+    created: "2024-12-11T07:03:32.607037411Z"
+    description: DB Name 0.3.6 db var
+    digest: b51976d8b543ff3607a0c973267b1cd9215fb1655140f95b85fc5c5f38dae2a0
+    icon: https://www.qytang.com/Public/home/images/logo0.png
+    name: qytang-microservice
+    type: application
+    urls:
+    - https://github.com/collinsctk/qytang-ms-helm-charts/releases/download/qytang-microservice-0.3.6/qytang-microservice-0.3.6.tgz
+    version: 0.3.6
+  - apiVersion: v2
     appVersion: 0.3.5
     created: "2024-12-11T06:35:37.892391138Z"
     description: DB Name 0.3.5 db var
@@ -276,4 +287,4 @@ entries:
     urls:
     - https://collinsctk.github.io/qytang-ms-helm-charts/qytang-microservice-0.1.0.tgz
     version: 0.1.0
-generated: "2024-12-11T06:35:37.892612052Z"
+generated: "2024-12-11T07:03:32.60722951Z"
