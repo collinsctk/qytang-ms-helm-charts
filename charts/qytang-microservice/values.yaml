@@ -28,7 +28,7 @@ Ingress:
 deployments:
   namespace: qytang-ns
   serviceAccountName: qytangsa
-  dbName: db
+  dbName: qytdb
   dbHost: db
   dbUser: qytdbuser
   dbPass: Cisc0123
