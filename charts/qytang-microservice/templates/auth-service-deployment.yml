@@ -28,3 +28,6 @@ spec:
             limits:
               cpu: {{ .Values.deployments.authService.resources.limits.cpu }}
               memory: {{ .Values.deployments.authService.resources.limits.memory }}
+          env:
+            - name: DBName
+              value: {{ .Values.deployments.dbname }}
