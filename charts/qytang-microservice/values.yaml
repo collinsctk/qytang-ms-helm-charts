@@ -29,7 +29,8 @@ deployments:
   namespace: qytang-ns
   serviceAccountName: qytangsa
   dbName: qytdb
-  dbHost: pgm-bp17gii2vq296bsn4o.pg.rds.aliyuncs.com
+#  dbHost: pgm-bp17gii2vq296bsn4o.pg.rds.aliyuncs.com
+  dbHost: db
   dbUser: qytdbuser
   dbPass: Cisc0123
   # interface access
