@@ -1,43 +1,43 @@
-{{/*apiVersion: networking.k8s.io/v1*/}}
-{{/*kind: Ingress*/}}
-{{/*metadata:*/}}
-{{/*  name: {{ .Values.Ingress.name }}*/}}
-{{/*  namespace: {{ .Values.Ingress.namespace }}*/}}
-{{/*spec:*/}}
-{{/*  ingressClassName: {{ .Values.Ingress.ingressClassName }}*/}}
-{{/*  tls:*/}}
-{{/*    - hosts:*/}}
-{{/*        - {{ .Values.Ingress.host }}*/}}
-{{/*      secretName: ms-tls-secret*/}}
-{{/*  rules:*/}}
-{{/*    - host: {{ .Values.Ingress.host }}*/}}
-{{/*      http:*/}}
-{{/*        paths:*/}}
-{{/*          - backend:*/}}
-{{/*              service:*/}}
-{{/*                name: {{ .Values.deployments.nginxService.serviceName }}*/}}
-{{/*                port:*/}}
-{{/*                  number: {{ .Values.deployments.nginxService.servicePort }}*/}}
-{{/*            path: {{ .Values.deployments.nginxService.ingressPath }}*/}}
-{{/*            pathType: Prefix*/}}
-{{/*          - backend:*/}}
-{{/*              service:*/}}
-{{/*                name: {{ .Values.deployments.authService.serviceName }}*/}}
-{{/*                port:*/}}
-{{/*                  number: {{ .Values.deployments.authService.servicePort }}*/}}
-{{/*            path: {{ .Values.deployments.authService.ingressPath }}*/}}
-{{/*            pathType: Prefix*/}}
-{{/*          - backend:*/}}
-{{/*              service:*/}}
-{{/*                name: {{ .Values.deployments.getItemsService.serviceName }}*/}}
-{{/*                port:*/}}
-{{/*                  number: {{ .Values.deployments.getItemsService.servicePort }}*/}}
-{{/*            path: {{ .Values.deployments.getItemsService.ingressPath }}*/}}
-{{/*            pathType: Prefix*/}}
-{{/*          - backend:*/}}
-{{/*              service:*/}}
-{{/*                name: {{ .Values.deployments.postItemsService.serviceName }}*/}}
-{{/*                port:*/}}
-{{/*                  number: {{ .Values.deployments.postItemsService.servicePort }}*/}}
-{{/*            path: {{ .Values.deployments.postItemsService.ingressPath }}*/}}
-{{/*            pathType: Prefix*/}}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.Ingress.name }}
+  namespace: {{ .Values.Ingress.namespace }}
+spec:
+  ingressClassName: {{ .Values.Ingress.ingressClassName }}
+  tls:
+    - hosts:
+        - {{ .Values.Ingress.host }}
+      secretName: ms-tls-secret
+  rules:
+    - host: {{ .Values.Ingress.host }}
+      http:
+        paths:
+          - backend:
+              service:
+                name: {{ .Values.deployments.nginxService.serviceName }}
+                port:
+                  number: {{ .Values.deployments.nginxService.servicePort }}
+            path: {{ .Values.deployments.nginxService.ingressPath }}
+            pathType: Prefix
+          - backend:
+              service:
+                name: {{ .Values.deployments.authService.serviceName }}
+                port:
+                  number: {{ .Values.deployments.authService.servicePort }}
+            path: {{ .Values.deployments.authService.ingressPath }}
+            pathType: Prefix
+          - backend:
+              service:
+                name: {{ .Values.deployments.getItemsService.serviceName }}
+                port:
+                  number: {{ .Values.deployments.getItemsService.servicePort }}
+            path: {{ .Values.deployments.getItemsService.ingressPath }}
+            pathType: Prefix
+          - backend:
+              service:
+                name: {{ .Values.deployments.postItemsService.serviceName }}
+                port:
+                  number: {{ .Values.deployments.postItemsService.servicePort }}
+            path: {{ .Values.deployments.postItemsService.ingressPath }}
+            pathType: Prefix
